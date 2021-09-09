@@ -1,3 +1,7 @@
+package ventana;
+
+
+import mis.clases.*;
 
 import javax.swing.DefaultListModel;
 

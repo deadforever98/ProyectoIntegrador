@@ -1,3 +1,5 @@
+package mis.clases;
+
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
