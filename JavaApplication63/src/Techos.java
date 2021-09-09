@@ -1,5 +1,7 @@
 
+import java.awt.Image;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 
 public class Techos extends Ladrillo{
@@ -14,7 +16,10 @@ private double espesor;
         
     }
 
-    
+    public String[] lista() {
+        String A[] = { "","hueco 20", "hueco 15","hueco 12","hueco 8"};
+        return A;
+    }
     
     @Override
     public String marcaLadrillo() {
@@ -79,5 +84,39 @@ private double espesor;
     
     public double calculoPiedraChancada(){
         return 0.6*this.calculovolumenMorteroyConcreto();
+    }
+
+    @Override
+    public ImageIcon getImageLadrillo(String opcion) {
+        
+        final int ancho=170;
+        final int alto=140;
+                
+        //ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong13.jpg");
+        ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\lad20huecos.png");
+        String[] ladrillos=lista();
+        if(opcion == ladrillos[1]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\lad20huecos.png");
+        }else if(opcion == ladrillos[2]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\lad15Huecos.jpg");
+        }else if(opcion == ladrillos[3]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\lad12Huecos.jpg");
+        }else if(opcion == ladrillos[4]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\lad8Huecos.jpg");
+        }
+        
+        Image imgg=p.getImage().getScaledInstance(
+                ancho, 
+                alto, 
+                Image.SCALE_SMOOTH);
+        p = new ImageIcon(imgg,p.getDescription());
+        
+        return p;
+        
+    }
+
+    @Override
+    public ImageIcon getImageResponsive() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

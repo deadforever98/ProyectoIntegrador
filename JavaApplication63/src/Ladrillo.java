@@ -1,5 +1,6 @@
 
 import java.text.DecimalFormat;
+import javax.swing.ImageIcon;
 
 public abstract class Ladrillo {
 
@@ -120,5 +121,6 @@ public abstract class Ladrillo {
     //calculo de m^3 de arena gruesa por m^2 de muro
     public abstract double calculoArenaGruesa();
         
-    
+    public abstract ImageIcon getImageLadrillo(String opcion);
+    public abstract ImageIcon getImageResponsive();
 }

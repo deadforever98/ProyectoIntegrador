@@ -11,7 +11,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="FIRM AND STRONG"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Hand Cursor"/>
+      <Color id="Cursor Por defecto"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -211,7 +211,7 @@
                                   <Component id="txtancho" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="43" max="32767" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="imgLadrilloPortante" min="-2" pref="182" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -230,7 +230,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                      <Component id="jLabel1" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="imgLadrilloPortante" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -270,9 +270,8 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel1">
+                    <Component class="javax.swing.JLabel" name="imgLadrilloPortante">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jLabel1"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="LADRILLO">
@@ -413,7 +412,7 @@
                       </Border>
                     </Property>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Southeast Resize Cursor"/>
+                      <Color id="Cursor Por defecto"/>
                     </Property>
                     <Property name="debugGraphicsOptions" type="int" value="-1"/>
                   </Properties>
@@ -694,7 +693,7 @@
                       </Border>
                     </Property>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Southeast Resize Cursor"/>
+                      <Color id="Cursor Por defecto"/>
                     </Property>
                     <Property name="debugGraphicsOptions" type="int" value="-1"/>
                   </Properties>
@@ -912,7 +911,7 @@
                                   <Component id="txtancho2" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="43" max="32767" attributes="0"/>
-                              <Component id="label3" min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="imgLadrilloTab" min="-2" pref="182" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -931,7 +930,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                      <Component id="label3" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="imgLadrilloTab" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -971,9 +970,8 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="label3">
+                    <Component class="javax.swing.JLabel" name="imgLadrilloTab">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jLabel1"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="LADRILLO">
@@ -1173,7 +1171,7 @@
                                   <Component id="txtancho3" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="43" max="32767" attributes="0"/>
-                              <Component id="label5" min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="imgTecho" min="-2" pref="182" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1192,7 +1190,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                      <Component id="label5" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="imgTecho" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -1232,9 +1230,8 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="label5">
+                    <Component class="javax.swing.JLabel" name="imgTecho">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jLabel1"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="LADRILLO">

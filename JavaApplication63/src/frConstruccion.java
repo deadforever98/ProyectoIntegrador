@@ -6,6 +6,7 @@ public class frConstruccion extends javax.swing.JFrame {
     MurosPortantes mp = new MurosPortantes();
     MurosTabiques mt = new MurosTabiques();
     Techos te = new Techos();
+    String opcion;
     int marca, vertical, horizontal, asentado,
             marca2, vertical2, horizontal2, asentado2,
             marca3, espesor;
@@ -16,6 +17,7 @@ public class frConstruccion extends javax.swing.JFrame {
         cargaLista1();
         cargaLista2();
         cargaLista3();
+        
     }
 
     void cargaLista1() {
@@ -47,7 +49,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtlargo = new javax.swing.JTextField();
         txtancho = new javax.swing.JTextField();
         txtalto = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        imgLadrilloPortante = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtalm = new javax.swing.JTextField();
@@ -83,7 +85,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtlargo2 = new javax.swing.JTextField();
         txtancho2 = new javax.swing.JTextField();
         txtalto2 = new javax.swing.JTextField();
-        label3 = new javax.swing.JLabel();
+        imgLadrilloTab = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         lstre2 = new javax.swing.JList<>();
         btncalcularta = new javax.swing.JButton();
@@ -95,7 +97,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtlargo3 = new javax.swing.JTextField();
         txtancho3 = new javax.swing.JTextField();
         txtalto3 = new javax.swing.JTextField();
-        label5 = new javax.swing.JLabel();
+        imgTecho = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         txtalte = new javax.swing.JTextField();
@@ -110,7 +112,7 @@ public class frConstruccion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FIRM AND STRONG");
-        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jTabbedPane2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jTabbedPane2.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
@@ -146,8 +148,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtalto.setEditable(false);
         txtalto.setBorder(javax.swing.BorderFactory.createTitledBorder("ALTO"));
 
-        jLabel1.setText("jLabel1");
-        jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
+        imgLadrilloPortante.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -160,7 +161,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(txtlargo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtancho, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgLadrilloPortante, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         jPanel8Layout.setVerticalGroup(
@@ -176,7 +177,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtalto, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgLadrilloPortante, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -243,7 +244,7 @@ public class frConstruccion extends javax.swing.JFrame {
 
         cb2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ELEGIR", "0.01", "0.015" }));
         cb2.setBorder(javax.swing.BorderFactory.createTitledBorder("JUNTA HORIZONTAL"));
-        cb2.setCursor(new java.awt.Cursor(java.awt.Cursor.SE_RESIZE_CURSOR));
+        cb2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         cb2.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         cb2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -404,7 +405,7 @@ public class frConstruccion extends javax.swing.JFrame {
 
         cbhorizta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ELEGIR", "0.01", "0.015" }));
         cbhorizta.setBorder(javax.swing.BorderFactory.createTitledBorder("JUNTA HORIZONTAL"));
-        cbhorizta.setCursor(new java.awt.Cursor(java.awt.Cursor.SE_RESIZE_CURSOR));
+        cbhorizta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         cbhorizta.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         cbhorizta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -525,8 +526,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtalto2.setEditable(false);
         txtalto2.setBorder(javax.swing.BorderFactory.createTitledBorder("ALTO"));
 
-        label3.setText("jLabel1");
-        label3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
+        imgLadrilloTab.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -539,7 +539,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(txtlargo2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtancho2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgLadrilloTab, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         jPanel14Layout.setVerticalGroup(
@@ -555,7 +555,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtalto2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgLadrilloTab, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -677,8 +677,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtalto3.setEditable(false);
         txtalto3.setBorder(javax.swing.BorderFactory.createTitledBorder("ALTO"));
 
-        label5.setText("jLabel1");
-        label5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
+        imgTecho.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -691,7 +690,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(txtlargo3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtancho3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         jPanel17Layout.setVerticalGroup(
@@ -707,7 +706,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtalto3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -857,6 +856,13 @@ public class frConstruccion extends javax.swing.JFrame {
             txtlargo.setText(String.valueOf(mp.dimensionLadrilloLargo()));
             txtancho.setText(String.valueOf(mp.dimensionLadrilloAncho()));
             txtalto.setText(String.valueOf(mp.dimensionLadrilloAlto()));
+            String opcion=String.valueOf(cb1.getSelectedItem());
+            if(opcion == "Escoger"){
+                imgLadrilloPortante.setIcon(null);
+            }else{
+                imgLadrilloPortante.setIcon(mp.getImageLadrillo(opcion));
+            }
+            
         } catch (Exception ex) {
 
         }
@@ -920,6 +926,12 @@ public class frConstruccion extends javax.swing.JFrame {
             txtlargo2.setText(String.valueOf(mt.dimensionLadrilloLargo()));
             txtancho2.setText(String.valueOf(mt.dimensionLadrilloAncho()));
             txtalto2.setText(String.valueOf(mt.dimensionLadrilloAlto()));
+            String opcion=String.valueOf(cbladrita.getSelectedItem());
+            if(opcion == "Escoger"){
+                imgLadrilloTab.setIcon(null);
+            }else{
+                imgLadrilloTab.setIcon(mt.getImageLadrillo(opcion));
+            }
         } catch (Exception ex) {
 
         }
@@ -977,6 +989,12 @@ public class frConstruccion extends javax.swing.JFrame {
             txtlargo3.setText(String.valueOf(te.dimensionLadrilloLargo()));
             txtancho3.setText(String.valueOf(te.dimensionLadrilloAncho()));
             txtalto3.setText(String.valueOf(te.dimensionLadrilloAlto()));
+            String opcion=String.valueOf(cbladrite.getSelectedItem());
+            if(opcion == "Escoger"){
+                imgTecho.setIcon(null);
+            }else{
+                imgTecho.setIcon(te.getImageLadrillo(opcion));
+            }
         } catch (Exception ex) {
 
         }
@@ -1053,8 +1071,10 @@ public class frConstruccion extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbladrita;
     private javax.swing.JComboBox<String> cbladrite;
     private javax.swing.JComboBox<String> cbvertita;
+    private javax.swing.JLabel imgLadrilloPortante;
+    private javax.swing.JLabel imgLadrilloTab;
+    private javax.swing.JLabel imgTecho;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1065,7 +1085,6 @@ public class frConstruccion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
@@ -1076,26 +1095,19 @@ public class frConstruccion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JLabel label3;
     private javax.swing.JLabel label4;
-    private javax.swing.JLabel label5;
     private javax.swing.JLabel label6;
     private javax.swing.JList<String> lstre;
     private javax.swing.JList<String> lstre2;
     private javax.swing.JList<String> lstre3;
     private javax.swing.JRadioButton rb1;
     private javax.swing.JRadioButton rb2;
-    private javax.swing.JRadioButton rb3;
-    private javax.swing.JRadioButton rb4;
     private javax.swing.JRadioButton rb5;
     private javax.swing.JRadioButton rb6;
-    private javax.swing.JRadioButton rb7;
-    private javax.swing.JRadioButton rb8;
     private javax.swing.JTextField txtalm;
     private javax.swing.JTextField txtalta;
     private javax.swing.JTextField txtalte;

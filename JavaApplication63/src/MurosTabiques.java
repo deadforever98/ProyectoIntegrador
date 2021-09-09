@@ -1,4 +1,8 @@
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
+
 public class MurosTabiques extends Ladrillo{
     
     public MurosTabiques(){
@@ -8,6 +12,10 @@ public class MurosTabiques extends Ladrillo{
         super(juntavertical, juntahorizontal, marca, tipo);
     }
     
+    public String[] lista() {
+        String A[] = {"", "pandereta", "tabicón"};
+        return A;
+    }
     
     @Override
     public String marcaLadrillo() {
@@ -57,6 +65,34 @@ public class MurosTabiques extends Ladrillo{
     @Override
     public double calculoArenaGruesa() {
         return 1.05*this.calculovolumenMorteroyConcreto();
+    }
+
+    @Override
+    public ImageIcon getImageLadrillo(String opcion) {
+        final int ancho=170;
+        final int alto=140;
+                
+        //ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong13.jpg");
+        ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladPandereta.jpg");
+        String[] ladrillos=lista();
+        if(opcion == ladrillos[1]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladPandereta.jpg");
+        }else if(opcion == ladrillos[2]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladTabicon.png");
+        }
+        
+        Image imgg=p.getImage().getScaledInstance(
+                ancho, 
+                alto, 
+                Image.SCALE_SMOOTH);
+        p = new ImageIcon(imgg,p.getDescription());
+        
+        return p;
+    }
+
+    @Override
+    public ImageIcon getImageResponsive() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

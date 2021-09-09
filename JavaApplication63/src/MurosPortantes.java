@@ -1,4 +1,8 @@
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
+
 public class MurosPortantes extends Ladrillo {
 
     public MurosPortantes(int juntavertical, int juntahorizontal, int marca, int tipo) {
@@ -62,5 +66,34 @@ public class MurosPortantes extends Ladrillo {
     @Override
     public double calculoArenaGruesa() {
         return 1.05*this.calculovolumenMorteroyConcreto();
+    }
+
+    @Override
+    public ImageIcon getImageLadrillo(String opcion) {
+        
+        final int ancho=170;
+        final int alto=111;
+                
+        //ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong13.jpg");
+        ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong18.png");
+        String[] ladrillos=lista();
+        if(opcion == ladrillos[1]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong18.png");
+        }else if(opcion == ladrillos[2]){
+            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong13.jpg");
+        }
+        
+        Image imgg=p.getImage().getScaledInstance(
+                ancho, 
+                alto, 
+                Image.SCALE_SMOOTH);
+        p = new ImageIcon(imgg,p.getDescription());
+        
+        return p;
+    }
+
+    @Override
+    public ImageIcon getImageResponsive() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
