@@ -122,5 +122,6 @@ public abstract class Ladrillo {
     public abstract double calculoArenaGruesa();
         
     public abstract ImageIcon getImageLadrillo(String opcion);
-    public abstract ImageIcon getImageResponsive();
+    public abstract ImageIcon getImageResponsive(double alto, double ancho,int opcion);
+    public abstract boolean validarCampos(String alto, String ancho,String espesor);
 }

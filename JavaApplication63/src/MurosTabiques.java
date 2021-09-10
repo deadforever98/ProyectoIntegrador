@@ -72,13 +72,15 @@ public class MurosTabiques extends Ladrillo{
         final int ancho=170;
         final int alto=140;
                 
-        //ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladKingKong13.jpg");
-        ImageIcon p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladPandereta.jpg");
+        
+        String urlpath="D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\";
+        
+        ImageIcon p=new ImageIcon(urlpath+"ladPandereta.jpg");
         String[] ladrillos=lista();
         if(opcion == ladrillos[1]){
-            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladPandereta.jpg");
+            p=new ImageIcon(urlpath+"ladPandereta.jpg");
         }else if(opcion == ladrillos[2]){
-            p=new ImageIcon("D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\ladTabicon.png");
+            p=new ImageIcon(urlpath+"ladTabicon.png");
         }
         
         Image imgg=p.getImage().getScaledInstance(
@@ -91,8 +93,66 @@ public class MurosTabiques extends Ladrillo{
     }
 
     @Override
-    public ImageIcon getImageResponsive() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ImageIcon getImageResponsive(double alto, double ancho,int opcion) {
+        
+        //medida metro ancho y alto maximo:10
+        final double ANCHOMAX=310;
+        final double ALTOMAX=155;
+        double anchoCalc=ancho*34;
+        double altoCalc=alto*17;
+        
+        if(anchoCalc>ANCHOMAX){
+            ancho=ANCHOMAX;
+        }else{
+            ancho=anchoCalc;
+        }
+        if(altoCalc>ALTOMAX){
+            alto=ALTOMAX;         
+        }else{
+            alto=altoCalc;
+        }
+        
+        String urlpath="D:\\curso integrador\\proyecto\\ProyectoIntegrador\\JavaApplication63\\src\\imagenes\\";
+        
+        ImageIcon p=new ImageIcon(urlpath+"pared_soga.jpg");
+        
+        String imagen;
+        if(opcion==1){
+            p=new ImageIcon(urlpath+"pared_soga.jpg");
+        }else{
+            p=new ImageIcon(urlpath+"pared_cabeza.png");
+        }
+        Image imgg=p.getImage().getScaledInstance(
+                (int) ancho, 
+                (int) alto, 
+                Image.SCALE_SMOOTH);
+        p = new ImageIcon(imgg,p.getDescription());
+        return p;
+        
+    }
+
+    @Override
+    public boolean validarCampos(String alto, String ancho,String espesor) {
+        
+        boolean ans=true;
+        if(alto==null || alto.isEmpty() || alto.trim().isEmpty() || 
+           ancho==null || ancho.isEmpty() || ancho.trim().isEmpty())
+        {
+            ans=false;
+        }else{
+            try{
+               int altonum=Integer.parseInt(alto);
+               int largonum=Integer.parseInt(ancho);
+               
+               double altodob=Double.parseDouble(alto);
+               double largodob=Double.parseDouble(ancho);
+               
+            } catch (Exception e) {
+               ans=false; 
+            }
+        }
+        return ans;
+        
     }
     
     

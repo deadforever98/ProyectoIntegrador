@@ -312,7 +312,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <Component id="imgPortante" min="-2" pref="316" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="41" max="32767" attributes="0"/>
@@ -330,7 +330,7 @@
                               <Component id="txtlarm" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="163" max="-2" attributes="0"/>
+                          <Component id="imgPortante" min="-2" pref="163" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -350,10 +350,12 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtlarm">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtlarmActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel3">
+                <Component class="javax.swing.JLabel" name="imgPortante">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MURO"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                         <BevelBorder/>
@@ -806,7 +808,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="label4" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <Component id="imgTabique" min="-2" pref="316" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="41" max="32767" attributes="0"/>
@@ -824,7 +826,7 @@
                               <Component id="txtlargta" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="label4" min="-2" pref="163" max="-2" attributes="0"/>
+                          <Component id="imgTabique" min="-2" pref="163" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -845,9 +847,8 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtlargta">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label4">
+                <Component class="javax.swing.JLabel" name="imgTabique">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MURO"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                         <BevelBorder/>
@@ -1171,7 +1172,7 @@
                                   <Component id="txtancho3" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="43" max="32767" attributes="0"/>
-                              <Component id="imgTecho" min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="imgLadTecho" min="-2" pref="182" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1190,7 +1191,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                      <Component id="imgTecho" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="imgLadTecho" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -1230,7 +1231,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="imgTecho">
+                    <Component class="javax.swing.JLabel" name="imgLadTecho">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1272,7 +1273,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="label6" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <Component id="imgTecho" min="-2" pref="316" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1290,7 +1291,7 @@
                               <Component id="txtlargte" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="label6" min="-2" pref="163" max="-2" attributes="0"/>
+                          <Component id="imgTecho" min="-2" pref="163" max="-2" attributes="0"/>
                           <EmptySpace pref="31" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1311,9 +1312,8 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtlargte">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label6">
+                <Component class="javax.swing.JLabel" name="imgTecho">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MURO"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                         <BevelBorder/>

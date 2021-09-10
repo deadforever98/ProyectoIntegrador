@@ -1,5 +1,6 @@
 
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 public class frConstruccion extends javax.swing.JFrame {
 
@@ -17,7 +18,7 @@ public class frConstruccion extends javax.swing.JFrame {
         cargaLista1();
         cargaLista2();
         cargaLista3();
-        
+
     }
 
     void cargaLista1() {
@@ -55,7 +56,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtalm = new javax.swing.JTextField();
         LARGO = new javax.swing.JLabel();
         txtlarm = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        imgPortante = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         cb2 = new javax.swing.JComboBox<>();
         cb3 = new javax.swing.JComboBox<>();
@@ -79,7 +80,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtalta = new javax.swing.JTextField();
         LARGO1 = new javax.swing.JLabel();
         txtlargta = new javax.swing.JTextField();
-        label4 = new javax.swing.JLabel();
+        imgTabique = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         txtlargo2 = new javax.swing.JTextField();
@@ -97,13 +98,13 @@ public class frConstruccion extends javax.swing.JFrame {
         txtlargo3 = new javax.swing.JTextField();
         txtancho3 = new javax.swing.JTextField();
         txtalto3 = new javax.swing.JTextField();
-        imgTecho = new javax.swing.JLabel();
+        imgLadTecho = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         txtalte = new javax.swing.JTextField();
         LARGO2 = new javax.swing.JLabel();
         txtlargte = new javax.swing.JTextField();
-        label6 = new javax.swing.JLabel();
+        imgTecho = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         lstre3 = new javax.swing.JList<>();
         btncalcularte = new javax.swing.JButton();
@@ -204,8 +205,13 @@ public class frConstruccion extends javax.swing.JFrame {
 
         LARGO.setText("LARGO");
 
-        jLabel3.setText("MURO");
-        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        txtlarm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlarmActionPerformed(evt);
+            }
+        });
+
+        imgPortante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -223,7 +229,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtlarm, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgPortante, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -236,7 +242,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(LARGO, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtlarm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgPortante, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -476,8 +482,7 @@ public class frConstruccion extends javax.swing.JFrame {
 
         LARGO1.setText("LARGO");
 
-        label4.setText("MURO");
-        label4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        imgTabique.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -495,7 +500,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtlargta, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgTabique, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -508,7 +513,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(LARGO1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtlargta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgTabique, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -677,7 +682,7 @@ public class frConstruccion extends javax.swing.JFrame {
         txtalto3.setEditable(false);
         txtalto3.setBorder(javax.swing.BorderFactory.createTitledBorder("ALTO"));
 
-        imgTecho.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
+        imgLadTecho.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "LADRILLO"));
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -690,7 +695,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(txtlargo3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtancho3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(imgTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgLadTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         jPanel17Layout.setVerticalGroup(
@@ -706,7 +711,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtalto3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(imgTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgLadTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -733,8 +738,7 @@ public class frConstruccion extends javax.swing.JFrame {
 
         LARGO2.setText("LARGO");
 
-        label6.setText("MURO");
-        label6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        imgTecho.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -752,7 +756,7 @@ public class frConstruccion extends javax.swing.JFrame {
                         .addComponent(txtlargte, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
@@ -765,7 +769,7 @@ public class frConstruccion extends javax.swing.JFrame {
                     .addComponent(LARGO2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtlargte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgTecho, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -856,13 +860,13 @@ public class frConstruccion extends javax.swing.JFrame {
             txtlargo.setText(String.valueOf(mp.dimensionLadrilloLargo()));
             txtancho.setText(String.valueOf(mp.dimensionLadrilloAncho()));
             txtalto.setText(String.valueOf(mp.dimensionLadrilloAlto()));
-            String opcion=String.valueOf(cb1.getSelectedItem());
-            if(opcion == "Escoger"){
+            String opcion = String.valueOf(cb1.getSelectedItem());
+            if (opcion == "Escoger") {
                 imgLadrilloPortante.setIcon(null);
-            }else{
+            } else {
                 imgLadrilloPortante.setIcon(mp.getImageLadrillo(opcion));
             }
-            
+
         } catch (Exception ex) {
 
         }
@@ -884,27 +888,39 @@ public class frConstruccion extends javax.swing.JFrame {
     }//GEN-LAST:event_cb2ActionPerformed
 
     private void btncalcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcular2ActionPerformed
-        horizontal = cb2.getSelectedIndex();
-        vertical = cb3.getSelectedIndex();
-        if (rb1.isSelected()) {
-            asentado2 = 0;
-        }
-        if (rb2.isSelected()) {
-            asentado2 = 1;
-        }
-        mp.setJuntavertical(vertical);
-        mp.setJuntahorizontal(horizontal);
-        mp.setTipo(asentado);
+
+        String altoStr = txtalm.getText().toString();
+        String largoStr = txtlarm.getText().toString();
+        if (mp.validarCampos(altoStr, largoStr, "")) {
+            horizontal = cb2.getSelectedIndex();
+            vertical = cb3.getSelectedIndex();
+            if (rb1.isSelected()) {
+                asentado2 = 0;
+            }
+            if (rb2.isSelected()) {
+                asentado2 = 1;
+            }
+            mp.setJuntavertical(vertical);
+            mp.setJuntahorizontal(horizontal);
+            mp.setTipo(asentado);
 //        mp = new MurosPortantes(vertical, horizontal, marca, WIDTH);
-        moResultados.addElement("dimension ladrillo alto:" + mp.dimensionLadrilloAlto());
-        moResultados.addElement("dimension ladrillo largo: " + mp.dimensionLadrilloLargo());
-        moResultados.addElement("dimension ladrillo ancho muro" + mp.dimensionLadrilloAncho());
-        moResultados.addElement("cantidad de ladrillos por m^2 Sin desperdicio: " + mp.ladrillosxMetroCuadradoSinDesperdicio());
-        moResultados.addElement("cantidad de ladrillos por m^2 Con desperdicio: " + mp.ladrillosxMetroCuadradoConDesperdicio());
-        moResultados.addElement("volumen del ladrillo m^3:" + mp.volumenLadrillo());
-        moResultados.addElement("volumen de mortero por m^2 de muro:" + mp.calculovolumenMorteroyConcreto());
-        moResultados.addElement("bolsas de cemento por m^2 de muro:" + mp.calculobolsascemento());
-        moResultados.addElement("m^3 de arena gruesa por m^2 de muro:" + mp.calculoArenaGruesa());
+            moResultados.addElement("dimension ladrillo alto:" + mp.dimensionLadrilloAlto());
+            moResultados.addElement("dimension ladrillo largo: " + mp.dimensionLadrilloLargo());
+            moResultados.addElement("dimension ladrillo ancho muro" + mp.dimensionLadrilloAncho());
+            moResultados.addElement("cantidad de ladrillos por m^2 Sin desperdicio: " + mp.ladrillosxMetroCuadradoSinDesperdicio());
+            moResultados.addElement("cantidad de ladrillos por m^2 Con desperdicio: " + mp.ladrillosxMetroCuadradoConDesperdicio());
+            moResultados.addElement("volumen del ladrillo m^3:" + mp.volumenLadrillo());
+            moResultados.addElement("volumen de mortero por m^2 de muro:" + mp.calculovolumenMorteroyConcreto());
+            moResultados.addElement("bolsas de cemento por m^2 de muro:" + mp.calculobolsascemento());
+            moResultados.addElement("m^3 de arena gruesa por m^2 de muro:" + mp.calculoArenaGruesa());
+            int alto = Integer.parseInt(txtalm.getText().toString());
+            int largo = Integer.parseInt(txtlarm.getText().toString());
+
+            imgPortante.setIcon(mp.getImageResponsive(alto, largo, asentado2));
+        } else {
+            JOptionPane.showMessageDialog(null, "Digite datos valitos en las casillas alto y largo", "Datos incorrectos", 0);
+        }
+
     }//GEN-LAST:event_btncalcular2ActionPerformed
 
     private void rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1ActionPerformed
@@ -926,10 +942,10 @@ public class frConstruccion extends javax.swing.JFrame {
             txtlargo2.setText(String.valueOf(mt.dimensionLadrilloLargo()));
             txtancho2.setText(String.valueOf(mt.dimensionLadrilloAncho()));
             txtalto2.setText(String.valueOf(mt.dimensionLadrilloAlto()));
-            String opcion=String.valueOf(cbladrita.getSelectedItem());
-            if(opcion == "Escoger"){
+            String opcion = String.valueOf(cbladrita.getSelectedItem());
+            if (opcion == "Escoger") {
                 imgLadrilloTab.setIcon(null);
-            }else{
+            } else {
                 imgLadrilloTab.setIcon(mt.getImageLadrillo(opcion));
             }
         } catch (Exception ex) {
@@ -946,27 +962,41 @@ public class frConstruccion extends javax.swing.JFrame {
     }//GEN-LAST:event_rb5ActionPerformed
 
     private void btncalculartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalculartaActionPerformed
-        horizontal2 = cbhorizta.getSelectedIndex();
-        vertical2 = cbvertita.getSelectedIndex();
-        if (rb5.isSelected()) {
-            asentado2 = 0;
-        }
-        if (rb6.isSelected()) {
-            asentado2 = 1;
-        }
-        mt.setJuntavertical(vertical2);
-        mt.setJuntahorizontal(horizontal2);
-        mt.setTipo(asentado2);
+
+        String altoStr = txtalta.getText().toString();
+        String largoStr = txtlargta.getText().toString();
+        if (mt.validarCampos(altoStr, largoStr, "")) {
+            horizontal2 = cbhorizta.getSelectedIndex();
+            vertical2 = cbvertita.getSelectedIndex();
+            if (rb5.isSelected()) {
+                asentado2 = 0;
+            }
+            if (rb6.isSelected()) {
+                asentado2 = 1;
+            }
+            mt.setJuntavertical(vertical2);
+            mt.setJuntahorizontal(horizontal2);
+            mt.setTipo(asentado2);
 //        mp = new MurosPortantes(vertical, horizontal, marca, WIDTH);
-        moResultados2.addElement("dimension ladrillo alto:" + mt.dimensionLadrilloAlto());
-        moResultados2.addElement("dimension ladrillo largo: " + mt.dimensionLadrilloLargo());
-        moResultados2.addElement("dimension ladrillo ancho muro" + mt.dimensionLadrilloAncho());
-        moResultados2.addElement("cantidad de ladrillos por m^2 Sin desperdicio: " + mt.ladrillosxMetroCuadradoSinDesperdicio());
-        moResultados2.addElement("cantidad de ladrillos por m^2 Con desperdicio: " + mt.ladrillosxMetroCuadradoConDesperdicio());
-        moResultados2.addElement("volumen del ladrillo m^3:" + mt.volumenLadrillo());
-        moResultados2.addElement("volumen de mortero por m^2 de muro:" + mt.calculovolumenMorteroyConcreto());
-        moResultados2.addElement("bolsas de cemento por m^2 de muro:" + mt.calculobolsascemento());
-        moResultados2.addElement("m^3 de arena gruesa por m^2 de muro:" + mt.calculoArenaGruesa());
+            moResultados2.addElement("dimension ladrillo alto:" + mt.dimensionLadrilloAlto());
+            moResultados2.addElement("dimension ladrillo largo: " + mt.dimensionLadrilloLargo());
+            moResultados2.addElement("dimension ladrillo ancho muro" + mt.dimensionLadrilloAncho());
+            moResultados2.addElement("cantidad de ladrillos por m^2 Sin desperdicio: " + mt.ladrillosxMetroCuadradoSinDesperdicio());
+            moResultados2.addElement("cantidad de ladrillos por m^2 Con desperdicio: " + mt.ladrillosxMetroCuadradoConDesperdicio());
+            moResultados2.addElement("volumen del ladrillo m^3:" + mt.volumenLadrillo());
+            moResultados2.addElement("volumen de mortero por m^2 de muro:" + mt.calculovolumenMorteroyConcreto());
+            moResultados2.addElement("bolsas de cemento por m^2 de muro:" + mt.calculobolsascemento());
+            moResultados2.addElement("m^3 de arena gruesa por m^2 de muro:" + mt.calculoArenaGruesa());
+
+            int alto = Integer.parseInt(txtalta.getText().toString());
+            int largo = Integer.parseInt(txtlargta.getText().toString());
+
+            imgTabique.setIcon(mt.getImageResponsive(alto, largo, asentado2));
+        } else {
+            JOptionPane.showMessageDialog(null, "Digite datos valitos en las casillas alto y largo", "Datos incorrectos", 0);
+        }
+
+
     }//GEN-LAST:event_btncalculartaActionPerformed
 
     private void cb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb3ActionPerformed
@@ -989,11 +1019,11 @@ public class frConstruccion extends javax.swing.JFrame {
             txtlargo3.setText(String.valueOf(te.dimensionLadrilloLargo()));
             txtancho3.setText(String.valueOf(te.dimensionLadrilloAncho()));
             txtalto3.setText(String.valueOf(te.dimensionLadrilloAlto()));
-            String opcion=String.valueOf(cbladrite.getSelectedItem());
-            if(opcion == "Escoger"){
-                imgTecho.setIcon(null);
-            }else{
-                imgTecho.setIcon(te.getImageLadrillo(opcion));
+            String opcion = String.valueOf(cbladrite.getSelectedItem());
+            if (opcion == "Escoger") {
+                imgLadTecho.setIcon(null);
+            } else {
+                imgLadTecho.setIcon(te.getImageLadrillo(opcion));
             }
         } catch (Exception ex) {
 
@@ -1001,22 +1031,40 @@ public class frConstruccion extends javax.swing.JFrame {
     }//GEN-LAST:event_cbladriteActionPerformed
 
     private void btncalcularteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularteActionPerformed
-        double espesor = Double.parseDouble(txtespesor.getText());
-        te.setEspesor(espesor);
+
+        String altoStr = txtalte.getText().toString();
+        String largoStr = txtlargte.getText().toString();
+        String espesorStr = txtespesor.getText().toString();
+
+        if (te.validarCampos(altoStr, largoStr, espesorStr)) {
+            double espesor = Double.parseDouble(txtespesor.getText());
+            te.setEspesor(espesor);
 //        mp = new MurosPortantes(vertical, horizontal, marca, WIDTH);
-        moResultados3.addElement("dimension ladrillo alto:" + te.dimensionLadrilloAlto());
-        moResultados3.addElement("dimension ladrillo largo: " + te.dimensionLadrilloLargo());
-        moResultados3.addElement("dimension ladrillo ancho muro" + te.dimensionLadrilloAncho());
-        moResultados3.addElement("cantidad de ladrillos por m^2 Sin desperdicio: " + te.ladrillosxMetroCuadradoSinDesperdicio());
-        moResultados3.addElement("cantidad de ladrillos por m^2 Con desperdicio: " + te.ladrillosxMetroCuadradoConDesperdicio());
-        moResultados3.addElement("volumen del ladrillo m^3:" + te.volumenLadrillo());
-        moResultados3.addElement("volumen de concreto por m^2 de techo:" + te.calculovolumenMorteroyConcreto());
-        moResultados3.addElement("bolsas de cemento por m^2 de techo :" + te.calculobolsascemento());
-        moResultados3.addElement("m^3 de arena gruesa por m^2 de techo:" + te.calculoArenaGruesa());
-        moResultados3.addElement("m^3 de piedra chancada por m^2 de techo:" + te.calculoArenaGruesa());
+            moResultados3.addElement("dimension ladrillo alto:" + te.dimensionLadrilloAlto());
+            moResultados3.addElement("dimension ladrillo largo: " + te.dimensionLadrilloLargo());
+            moResultados3.addElement("dimension ladrillo ancho muro" + te.dimensionLadrilloAncho());
+            moResultados3.addElement("cantidad de ladrillos por m^2 Sin desperdicio: " + te.ladrillosxMetroCuadradoSinDesperdicio());
+            moResultados3.addElement("cantidad de ladrillos por m^2 Con desperdicio: " + te.ladrillosxMetroCuadradoConDesperdicio());
+            moResultados3.addElement("volumen del ladrillo m^3:" + te.volumenLadrillo());
+            moResultados3.addElement("volumen de concreto por m^2 de techo:" + te.calculovolumenMorteroyConcreto());
+            moResultados3.addElement("bolsas de cemento por m^2 de techo :" + te.calculobolsascemento());
+            moResultados3.addElement("m^3 de arena gruesa por m^2 de techo:" + te.calculoArenaGruesa());
+            moResultados3.addElement("m^3 de piedra chancada por m^2 de techo:" + te.calculoArenaGruesa());
+
+            int alto = Integer.parseInt(txtalte.getText().toString());
+            int largo = Integer.parseInt(txtlargte.getText().toString());
+
+            imgTecho.setIcon(te.getImageResponsive(alto, largo, 0));
+        } else {
+            JOptionPane.showMessageDialog(null, "Digite datos valitos en las casillas alto, largo y espesor", "Datos incorrectos", 0);
+        }
 
 
     }//GEN-LAST:event_btncalcularteActionPerformed
+
+    private void txtlarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlarmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlarmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1071,12 +1119,14 @@ public class frConstruccion extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbladrita;
     private javax.swing.JComboBox<String> cbladrite;
     private javax.swing.JComboBox<String> cbvertita;
+    private javax.swing.JLabel imgLadTecho;
     private javax.swing.JLabel imgLadrilloPortante;
     private javax.swing.JLabel imgLadrilloTab;
+    private javax.swing.JLabel imgPortante;
+    private javax.swing.JLabel imgTabique;
     private javax.swing.JLabel imgTecho;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
@@ -1099,8 +1149,6 @@ public class frConstruccion extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JLabel label4;
-    private javax.swing.JLabel label6;
     private javax.swing.JList<String> lstre;
     private javax.swing.JList<String> lstre2;
     private javax.swing.JList<String> lstre3;
